@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vYu-Jq-3wH">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Minhas Anotações-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MInhas_Anotacoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fundo" translatesAutoresizingMaskIntoConstraints="NO" id="edE-Sk-3ax">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6sw-gJ-Zzn">
+                                <rect key="frame" x="57" y="134" width="300" height="301"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kRN-B9-tgu">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
+                                        <color key="backgroundColor" red="0.96531477172139812" green="1" blue="0.76867621603873637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPu-Ui-NIm">
+                                        <rect key="frame" x="0.0" y="250" width="300" height="51"/>
+                                        <color key="backgroundColor" red="0.25301395939086291" green="0.16603008953161419" blue="0.019709367333565746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                        <state key="normal" title="SALVAR">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="42H-y8-3Se"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301" id="ubY-nW-9cV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6sw-gJ-Zzn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="H6t-fq-cah"/>
+                            <constraint firstItem="edE-Sk-3ax" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hbc-8c-iO5"/>
+                            <constraint firstItem="edE-Sk-3ax" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PJz-lv-8Zs"/>
+                            <constraint firstItem="edE-Sk-3ax" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fvr-WZ-edb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="edE-Sk-3ax" secondAttribute="bottom" id="leX-G2-hBo"/>
+                            <constraint firstItem="6sw-gJ-Zzn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="sJP-Pe-aUl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6sw-gJ-Zzn" secondAttribute="trailing" constant="57" id="xdy-RA-cjS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Minhas Anotações" id="0aE-m2-lwH"/>
+                    <connections>
+                        <outlet property="textArea" destination="kRN-B9-tgu" id="8EC-Ad-fYc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="761"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7se-9a-c4U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vYu-Jq-3wH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p5X-T6-goj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="obQ-GV-UvG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcg-6g-znX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="761.38392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fundo" width="768" height="462"/>
+    </resources>
+</document>
